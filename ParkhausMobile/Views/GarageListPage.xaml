@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ParkhausMobile.Views.GarageListPage"
+             Title="Parkhäuser">
+
+    <VerticalStackLayout Padding="16" Spacing="12">
+        <Label Text="Parkhaus-Liste"
+               FontSize="24"
+               FontAttributes="Bold" />
+
+        <Label Text="Hier kommt später die Liste aus der Datenbank." />
+    </VerticalStackLayout>
+
+</ContentPage>
