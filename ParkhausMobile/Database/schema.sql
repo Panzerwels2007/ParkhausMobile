@@ -1,0 +1,13 @@
+CREATE TABLE Garages (
+    Id UNIQUEIDENTIFIER NOT NULL
+        DEFAULT NEWID()
+        PRIMARY KEY,
+
+    Name NVARCHAR(100) NOT NULL,
+    Address NVARCHAR(200) NOT NULL,
+    Capacity INT NOT NULL,
+    FreeSpaces INT NOT NULL,
+    OpeningHours NVARCHAR(200) NULL,
+    PricingInfo NVARCHAR(200) NULL,
+    LastUpdated DATETIME2 NOT NULL DEFAULT SYSDATETIME()
+);
