@@ -5,11 +5,29 @@
              Title="Parkhäuser">
 
     <VerticalStackLayout Padding="16" Spacing="12">
-        <Label Text="Parkhaus-Liste"
-               FontSize="24"
-               FontAttributes="Bold" />
 
-        <Label Text="Hier kommt später die Liste aus der Datenbank." />
+        <Label Text="Parkhaus-Liste"
+           FontSize="24"
+           FontAttributes="Bold" />
+
+        <CollectionView x:Name="GaragesCollection">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="12" Margin="0,6" BorderColor="LightGray">
+                        <VerticalStackLayout Spacing="4">
+                            <Label Text="{Binding Name}"
+                               FontAttributes="Bold"
+                               FontSize="18" />
+
+                            <Label Text="{Binding Address}" />
+
+                            <Label Text="{Binding FreeSpaces, StringFormat='Freie Plätze: {0}'}" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
     </VerticalStackLayout>
 
 </ContentPage>
