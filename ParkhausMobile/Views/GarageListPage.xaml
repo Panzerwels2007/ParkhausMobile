@@ -10,7 +10,9 @@
            FontSize="24"
            FontAttributes="Bold" />
 
-        <CollectionView x:Name="GaragesCollection">
+        <CollectionView x:Name="GaragesCollection"
+                SelectionMode="Single"
+                SelectionChanged="OnGarageSelected">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Frame Padding="12" Margin="0,6" BorderColor="LightGray">

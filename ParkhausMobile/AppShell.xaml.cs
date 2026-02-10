@@ -1,10 +1,13 @@
-﻿namespace ParkhausMobile
+﻿using ParkhausMobile.Views;
+
+namespace ParkhausMobile;
+
+public partial class AppShell : Shell
 {
-    public partial class AppShell : Shell
+    public AppShell()
     {
-        public AppShell()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+
+        Routing.RegisterRoute(nameof(GarageDetailPage), typeof(GarageDetailPage));
     }
 }

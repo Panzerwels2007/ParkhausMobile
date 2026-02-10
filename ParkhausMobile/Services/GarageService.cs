@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using ParkhausMobile.Models;
-
 
 namespace ParkhausMobile.Services;
 
@@ -20,7 +16,7 @@ public class GarageService
         connection.Open();
 
         var command = new SqlCommand(
-            "SELECT Id, Name, Address, Capacity, FreeSpaces FROM Garages",
+            "SELECT Id, Name, Address, Capacity, FreeSpaces, OpeningHours, PricingInfo FROM Garages",
             connection);
 
         using var reader = command.ExecuteReader();
@@ -32,7 +28,9 @@ public class GarageService
                 Name = reader.GetString(1),
                 Address = reader.GetString(2),
                 Capacity = reader.GetInt32(3),
-                FreeSpaces = reader.GetInt32(4)
+                FreeSpaces = reader.GetInt32(4),
+                OpeningHours = reader.IsDBNull(5) ? null : reader.GetString(5),
+                PricingInfo = reader.IsDBNull(6) ? null : reader.GetString(6)
             });
         }
 

@@ -5,8 +5,11 @@
        x:Class="ParkhausMobile.AppShell">
 
     <TabBar>
-        <ShellContent Title="Dashboard" ContentTemplate="{DataTemplate views:DashboardPage}" />
-        <ShellContent Title="Liste" ContentTemplate="{DataTemplate views:GarageListPage}" />
+        <ShellContent Title="Dashboard"
+                      ContentTemplate="{DataTemplate views:DashboardPage}" />
+
+        <ShellContent Title="Liste"
+                      ContentTemplate="{DataTemplate views:GarageListPage}" />
     </TabBar>
 
 </Shell>
