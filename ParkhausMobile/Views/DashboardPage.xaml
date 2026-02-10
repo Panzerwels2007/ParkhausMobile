@@ -4,12 +4,21 @@
              x:Class="ParkhausMobile.Views.DashboardPage"
              Title="Dashboard">
 
-    <VerticalStackLayout Padding="16" Spacing="12">
-        <Label Text="Dashboard"
-               FontSize="24"
-               FontAttributes="Bold" />
+    <VerticalStackLayout Padding="16" Spacing="16">
 
-        <Label Text="Hier kommt später die Gesamtübersicht (freie Plätze, Auslastung, Top 3)." />
+        <Label Text="Dashboard"
+           FontSize="24"
+           FontAttributes="Bold" />
+
+        <Frame Padding="12">
+            <VerticalStackLayout Spacing="6">
+                <Label x:Name="GaragesCountLabel" />
+                <Label x:Name="FreeSpacesLabel" />
+                <Label x:Name="CapacityLabel" />
+                <Label x:Name="OccupancyLabel" />
+            </VerticalStackLayout>
+        </Frame>
+
     </VerticalStackLayout>
 
 </ContentPage>
