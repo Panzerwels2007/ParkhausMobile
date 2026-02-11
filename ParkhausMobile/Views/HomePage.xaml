@@ -21,18 +21,14 @@
                        Opacity="0.8" />
             </VerticalStackLayout>
 
-            
-            <Frame HeightRequest="180"
-                   CornerRadius="12"
-                   BackgroundColor="#E0E0E0"
-                   HorizontalOptions="Fill">
-                <Label Text="Hier kommt später ein Bild"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                       Opacity="0.6" />
+
+            <Frame HeightRequest="180" CornerRadius="12" Padding="0">
+                <Image Source="home_bild.jpg"
+           Aspect="AspectFill"
+           HeightRequest="180" />
             </Frame>
 
-            
+
             <VerticalStackLayout Spacing="4"
                                  VerticalOptions="EndAndExpand">
 
