@@ -23,7 +23,8 @@
 
                             <Label Text="{Binding Address}" />
 
-                            <Label Text="{Binding FreeSpaces, StringFormat='Freie Plätze: {0}'}" />
+                            <Label Text="{Binding FreeSpaces, StringFormat='Freie Plätze: {0}'}"
+                                    TextColor="{Binding FreeSpaces, Converter={StaticResource FreeSpacesToColorConverter}}" />
                         </VerticalStackLayout>
                     </Frame>
                 </DataTemplate>
