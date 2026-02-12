@@ -5,6 +5,8 @@
              xmlns:converters="clr-namespace:ParkhausMobile.Converters"
              x:Class="ParkhausMobile.App">
     <Application.Resources>
+
+        <!-- Converter registration for free space status colors in the UI -->
         <ResourceDictionary>
             <ResourceDictionary>
                 <converters:FreeSpacesToColorConverter x:Key="FreeSpacesToColorConverter" />

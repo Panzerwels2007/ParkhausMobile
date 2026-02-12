@@ -4,40 +4,58 @@
              x:Class="ParkhausMobile.Views.GarageListPage"
              Title="Parkhäuser">
 
+    <!-- Main layout container -->
     <VerticalStackLayout Padding="16" Spacing="12">
 
+        <!-- Page title -->
         <Label Text="Parkhaus-Liste"
            FontSize="24"
            FontAttributes="Bold" />
 
+        <!-- Search bar for filtering by name or address -->
         <SearchBar x:Name="SearchBar"
                Placeholder="Suchen (Name oder Adresse)"
                TextChanged="OnSearchTextChanged" />
 
+        <!-- Filter and sorting controls -->
         <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+
+            <!-- Filter by availability status -->
             <Picker x:Name="FilterPicker"
                 Title="Filter"
                 SelectedIndexChanged="OnFilterChanged" />
 
+            <!-- Sorting options -->
             <Picker x:Name="SortPicker"
                 Grid.Column="1"
                 Title="Sortierung"
                 SelectedIndexChanged="OnSortChanged" />
         </Grid>
 
+        <!-- CollectionView displays all garages -->
         <CollectionView x:Name="GaragesCollection"
                     SelectionMode="Single"
                     SelectionChanged="OnGarageSelected">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
+
+                    <!-- 
+                        Frame groups each garage visually.
+                        Note: Frame is marked as obsolete in newer .NET MAUI versions.
+                        It can be replaced with Border in future versions.
+                    -->
                     <Frame Padding="12" Margin="0,6" BorderColor="LightGray">
                         <VerticalStackLayout Spacing="4">
+
+                            <!-- Garage name -->
                             <Label Text="{Binding Name}"
                                FontAttributes="Bold"
                                FontSize="18" />
 
+                            <!-- Garage address -->
                             <Label Text="{Binding Address}" />
 
+                            <!-- Free spaces with color indicator -->
                             <Label Text="{Binding FreeSpaces, StringFormat='Freie Plätze: {0}'}"
                                TextColor="{Binding FreeSpaces, Converter={StaticResource FreeSpacesToColorConverter}}" />
                         </VerticalStackLayout>

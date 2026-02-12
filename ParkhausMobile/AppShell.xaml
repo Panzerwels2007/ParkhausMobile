@@ -4,6 +4,10 @@
        xmlns:views="clr-namespace:ParkhausMobile.Views"
        x:Class="ParkhausMobile.AppShell">
 
+    <!-- 
+        TabBar defines the main navigation structure of the application.
+        Each ShellContent represents one main page in the app.
+    -->
     <TabBar>
         <ShellContent Title="Home"
                   ContentTemplate="{DataTemplate views:HomePage}" />

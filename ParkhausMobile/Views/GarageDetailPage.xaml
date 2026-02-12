@@ -4,18 +4,27 @@
              x:Class="ParkhausMobile.Views.GarageDetailPage"
              Title="Details">
 
+    <!-- Main layout container for the detail view -->
     <VerticalStackLayout Padding="16" Spacing="10">
 
+        <!-- Displays the name of the selected garage -->
         <Label x:Name="NameLabel"
                FontSize="24"
                FontAttributes="Bold" />
 
+        <!-- Displays the address -->
         <Label x:Name="AddressLabel" />
 
+        <!-- Displays total capacity  -->
         <Label x:Name="CapacityLabel" />
+
+        <!-- Displays current number of free parking spaces -->
         <Label x:Name="FreeSpacesLabel" />
 
+        <!-- Displays opening hours  -->
         <Label x:Name="OpeningHoursLabel" />
+
+        <!-- Displays pricing information  -->
         <Label x:Name="PricingInfoLabel" />
 
     </VerticalStackLayout>

@@ -4,16 +4,19 @@
              x:Class="ParkhausMobile.Views.HomePage"
              Title="Home">
 
+    <!-- ScrollView ensures content is scrollable on smaller screens -->
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="24">
 
-            
+            <!-- Header section with app title and description -->
             <VerticalStackLayout Spacing="6">
+
+                <!-- Application name -->
                 <Label Text="ParkhausMobile"
                        FontSize="30"
                        FontAttributes="Bold"
                        HorizontalOptions="Center" />
-
+                
                 <Label Text="Willkommen zur Übersicht über verfügbare Parkhäuser."
                        FontSize="14"
                        HorizontalOptions="Center"
@@ -21,17 +24,24 @@
                        Opacity="0.8" />
             </VerticalStackLayout>
 
-
+            <!-- 
+                Frame used to display an image with rounded corners.
+                Note: Frame is marked as obsolete in newer .NET MAUI versions.
+                It can be replaced with Border in future versions.
+            -->
             <Frame HeightRequest="180" CornerRadius="12" Padding="0">
+
+                <!-- Image stored in Resources/Images folder -->
                 <Image Source="home_bild.jpg"
-           Aspect="AspectFill"
-           HeightRequest="180" />
+                        Aspect="AspectFill"
+                         HeightRequest="180" />
             </Frame>
 
-
+            <!-- Footer section with project information -->
             <VerticalStackLayout Spacing="4"
                                  VerticalOptions="EndAndExpand">
 
+                <!-- Divider line -->
                 <BoxView HeightRequest="1"
                          BackgroundColor="LightGray" />
 

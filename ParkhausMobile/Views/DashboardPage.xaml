@@ -4,17 +4,27 @@
              x:Class="ParkhausMobile.Views.DashboardPage"
              Title="Dashboard">
 
+    <!-- Main layout container with padding and spacing -->
     <VerticalStackLayout Padding="16" Spacing="16">
 
         <Label Text="Dashboard"
            FontSize="24"
            FontAttributes="Bold" />
 
+        <!-- 
+            Frame is used here to visually group the statistics.
+            Note: Frame is marked as obsolete in newer .NET MAUI versions.
+            It is still functional but can be replaced with Border in future versions.
+        -->
         <Frame Padding="12">
             <VerticalStackLayout Spacing="6">
+                <!-- Displays total number of garages -->
                 <Label x:Name="GaragesCountLabel" />
+                <!-- Displays total number of free parking spaces -->
                 <Label x:Name="FreeSpacesLabel" />
+                <!-- Displays total parking capacity -->
                 <Label x:Name="CapacityLabel" />
+                <!-- Displays calculated occupancy percentage -->
                 <Label x:Name="OccupancyLabel" />
             </VerticalStackLayout>
         </Frame>
