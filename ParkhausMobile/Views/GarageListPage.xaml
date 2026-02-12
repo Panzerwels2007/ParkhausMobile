@@ -10,9 +10,24 @@
            FontSize="24"
            FontAttributes="Bold" />
 
+        <SearchBar x:Name="SearchBar"
+               Placeholder="Suchen (Name oder Adresse)"
+               TextChanged="OnSearchTextChanged" />
+
+        <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+            <Picker x:Name="FilterPicker"
+                Title="Filter"
+                SelectedIndexChanged="OnFilterChanged" />
+
+            <Picker x:Name="SortPicker"
+                Grid.Column="1"
+                Title="Sortierung"
+                SelectedIndexChanged="OnSortChanged" />
+        </Grid>
+
         <CollectionView x:Name="GaragesCollection"
-                SelectionMode="Single"
-                SelectionChanged="OnGarageSelected">
+                    SelectionMode="Single"
+                    SelectionChanged="OnGarageSelected">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Frame Padding="12" Margin="0,6" BorderColor="LightGray">
@@ -24,7 +39,7 @@
                             <Label Text="{Binding Address}" />
 
                             <Label Text="{Binding FreeSpaces, StringFormat='Freie Plätze: {0}'}"
-                                    TextColor="{Binding FreeSpaces, Converter={StaticResource FreeSpacesToColorConverter}}" />
+                               TextColor="{Binding FreeSpaces, Converter={StaticResource FreeSpacesToColorConverter}}" />
                         </VerticalStackLayout>
                     </Frame>
                 </DataTemplate>
